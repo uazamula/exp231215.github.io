@@ -4,8 +4,17 @@
     </head>
     <body>
         <h1>Hello</h1>
+        {{ username[0] }}
+        {% for i in username %}
+        <p>{{ i }}</p>
+        {% endfor %}
         <p>more hello</p>
         <img src="{{ url_for('static', filename='images/blender.jpg') }}" alt ="blender2">
         <p>more code</p>
+        <form action="/user" method="get">
+            <label for="username">Username</label>
+            <input type="text" name="username">
+            <button type="submit">Run</button>
+        </form>
     </body>
 </html>
